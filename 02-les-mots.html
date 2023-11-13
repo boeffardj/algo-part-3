@@ -55,17 +55,22 @@
 
     function countWords() {
         let sentence = document.getElementById("sentence").value;
-        let mot = 0 ;
-        if (sentence.charAt(0) !== " "){
-        mot++
-        } 
-        for ( let i = 1 ;  i < sentence.length ; i++) 
-        if ((sentence.charAt(i) !== " ") && (sentence.charAt(i -1) === " " ))
+      let remplacer =   sentence.replaceAll(/[?:;,'!]/g," ");
+      let previous_mot = " " ;
+      let count = 0 ;
+        /* ne pas commencer la boucle a -1 d'ou le let i=1 */
+        
+        for ( let i = 0 ;  i < remplacer.length ; i++) {
+        let mot = remplacer.charAt(i);
+        
+        
+        if ((mot !== " ") && (previous_mot === " "))
         {
-            mot++;
-            
+        {count ++;} 
         }
-    console.log(mot);
+        previous_mot = mot;
+    }
+    console.log(`le nombre est ${count}`);
     }
 
 </script>
