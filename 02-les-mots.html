@@ -57,10 +57,17 @@
         let sentence = document.getElementById("sentence").value;
         let mot = 0 ;
         if (sentence.charAt(0) !== " "){
-            mot++
+        mot++
+        } 
+        for ( let i = 1 ;  i < sentence.length ; i++) 
+        if ((sentence.charAt(i) !== " ") && (sentence.charAt(i -1) === " " ))
+        {
+            mot++;
+            
         }
+    console.log(mot);
     }
 
 </script>
 </body>
-</html>
+</html> 
