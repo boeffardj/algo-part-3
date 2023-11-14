@@ -16,7 +16,7 @@
     <p class="h6 font-weight-bold text-center">#03 - La moyenne</p>
     <div class="instructions">
         <p class="text-secondary">Proposez successivement deux écritures pour la function average qui calcule et affiche une 
-            moyenne des notes données dans le tableau 'notes'.<br/>
+                  }          moyenne des notes données dans le tableau 'notes'.<br/>
             <strong>const notes = [8.75, 14, 13, 5.5, 9, 17, 11.25]</strong> (déjà défini dans la partie JavaScript) <br />
             La moyenne sera arrondie à 2 chiffres après la virgule.
             <p></p>
@@ -46,16 +46,24 @@
      */
 
     function average(noteArray) {
-    let stocker = 0 ;
-    for (let i = 0 ; i < notes.length ; i ++){
-        stocker += parseInt(notes[i],10);
-        let moyenne = stocker/notes;
-        console.log(moyenne);
+    /* let somme = 0 ;
+    /for (let i = 0 ; i < noteArray.length ; i ++){
+      somme += noteArray[i];
     }
-        
+    moyenne= somme/ noteArray.length;  
+    
+    console.log("Moyenne =" + moyenne.toFixed(2));
+    } */
+    somme = 0 ;
+    noteArray.forEach(average(noteArray.length)) {
+
+    somme += noteArray[i];
     }
+    moyenne= somme/ noteArray.length;  
+    
+    console.log("Moyenne =" + moyenne.toFixed(2));
 
-
+    }
 </script>
 </body>
 </html>
